@@ -26,8 +26,8 @@ This project is covered under the MIT license. To learn more about what this mea
 ## Contributing
 Enjoy and leave feedback! I am happy to share and happier to learn.
 
-## Tests
-There are no tests developed for this project.
+## Walkthrough
+Visit https://drive.google.com/file/d/1mqdptgescP0zzbNBQU7XRxCS5qRfEtRR/view for a video walkthrough
 
 ## Questions 
 If you have questions, please visit the source repository on Github (https://www.github.com/neffej) or email me at just.eneff@gmail.com.
