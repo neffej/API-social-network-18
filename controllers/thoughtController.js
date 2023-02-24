@@ -58,8 +58,17 @@ module.exports = {
         .then((thought)=>
         !thought
         ? res.status(404).json({ message: 'No thought with that ID' })
-        : console.log('Thought Deleted'))
-        .then(() => res.json({ message: 'Thought Deleted!' }))
+        : User.findOneAndUpdate(
+            { thoughts: req.params.thoughtId },
+            { $pull: { thoughts: req.params.thoughtId } },
+            { new: true }
+            )
+        )
+        .then((user) => 
+        !user 
+        ? res.status(404).json({ message: 'Thought deleted - no user found though!' })
+        : res.json({ message: 'Thought removed!'})
+        )
         .catch((err) => res.status(500).json(err));
     },
     // Add a reaction
